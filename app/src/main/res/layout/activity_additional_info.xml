@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_back" />
+
+    <TextView
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        android:lineSpacingExtra="18sp"
+        android:lineSpacingMultiplier="0"
+        android:textColor="@color/colorTextPrimary"
+        android:text="@string/intro_additional_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/btnSetPreference"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_enable"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/btn_set_preference"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="2dp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_preference" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_birthdate"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+
+        <EditText
+            android:id="@+id/edtBirthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="3dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_gender"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+
+        <EditText
+            android:id="@+id/edtGender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            android:inputType="text"
+            android:paddingTop="3dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_height"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+
+        <EditText
+            android:id="@+id/edtHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            android:paddingTop="3dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_weight"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            android:paddingTop="3dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/rlvPolicy"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_disable"
+        android:text="@string/btn_next"
+        android:textColor="@color/colorText"
+        android:fontFamily="@font/bebasneue_regular"
+        android:textSize="28sp" />
+
+    <TextView
+        android:layout_marginBottom="@dimen/width_28"
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_skip"
+        android:textColor="@color/btnColor"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+</LinearLayout>

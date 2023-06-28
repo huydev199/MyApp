@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround">
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_normal">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_back" />
+        <TextView
+            android:text="@string/user_type"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginTop="26dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnOrdinaryPerson"
+                android:text="@string/ordinary_person"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:background="@drawable/btn_enable"
+                android:textAllCaps="false"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:lineHeight="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <Button
+                android:id="@+id/btnSportsmanRunning"
+                android:text="@string/sportsman_running"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorText"
+                android:background="@drawable/btn_disable"
+                android:textAllCaps="false"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:lineHeight="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <Button
+                android:id="@+id/btnSportsmanEtc"
+                android:text="@string/sportsman_etc"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorText"
+                android:background="@drawable/btn_disable"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:lineHeight="14dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--   Time Seekbar     -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="@string/time"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hour_day"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:layout_marginRight="6dp"
+                app:layout_constraintRight_toLeftOf="@+id/ic_help_time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_help_time"/>
+
+            <ImageView
+                android:id="@+id/ic_help_time"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_help_circle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShowNoteTime"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="-8dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@color/boxBackGroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintTop_toBottomOf="@+id/ic_help_time"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingHorizontal="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/detail_hour_day"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="-8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSeekbarTime"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="0"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarTime"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <SeekBar
+
+                android:id="@+id/seekBarTime"
+                android:max="10"
+                android:min="0"
+                android:padding="0dp"
+                android:progress="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressBackgroundTint="@color/spinner"
+                android:progressTint="@color/colorTextTitle"
+                android:thumb="@drawable/ic_thumb_seekbar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--   Distance Seekbar     -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="@string/distance"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/km_exercise"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:layout_marginRight="6dp"
+                app:layout_constraintRight_toLeftOf="@+id/ic_help_distance"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_help_distance"/>
+
+            <ImageView
+                android:id="@+id/ic_help_distance"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_help_circle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShowNoteDistance"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="-8dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@color/boxBackGroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintTop_toBottomOf="@+id/ic_help_distance"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingHorizontal="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/detail_km_exercise"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="-8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSeekbarDistance"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="0"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarDistance"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekBarDistance"
+                android:max="24"
+                android:min="0"
+                android:padding="0dp"
+                android:progress="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressBackgroundTint="@color/spinner"
+                android:progressTint="@color/colorTextTitle"
+                android:thumb="@drawable/ic_thumb_seekbar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--   Number Seekbar     -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="@string/number"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/times_week"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:layout_marginRight="6dp"
+                app:layout_constraintRight_toLeftOf="@+id/ic_help_number"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_help_number"/>
+
+            <ImageView
+                android:id="@+id/ic_help_number"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_help_circle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShowNoteNumber"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="-8dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@color/boxBackGroundColor"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintTop_toBottomOf="@+id/ic_help_number"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingHorizontal="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/detail_times_week"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="-8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSeekbarNumber"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="0"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/seekBarNumber"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekBarNumber"
+                android:max="20"
+                android:min="0"
+                android:padding="0dp"
+                android:progress="0"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressBackgroundTint="@color/spinner"
+                android:progressTint="@color/colorTextTitle"
+                android:thumb="@drawable/ic_thumb_seekbar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:background="@drawable/btn_enable"
+            android:text="@string/btn_save"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_header"
+            android:fontFamily="@font/bebasneue_regular"
+            android:enabled="true"
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logIn"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+    </LinearLayout>
+</ScrollView>

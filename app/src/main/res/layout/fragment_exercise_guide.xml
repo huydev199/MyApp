@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_back_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnExerciseStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/main_padding"
+                    android:layout_marginRight="@dimen/main_padding"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:gravity="center"
+                        android:text="@string/session"
+                        android:textColor="@color/colorTextTitle"
+                        android:textFontWeight="500"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvSession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:text="01"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="48sp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_exercise_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_low_exercise"
+                            android:layout_width="match_parent"
+                            android:layout_height="296dp"
+                            android:src="@drawable/img_outdoor_hight" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/notosanskr_regular"
+                            android:text="@string/title_lt_test_prescription"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textFontWeight="700"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/main_padding"
+                    android:background="@drawable/bg_recyclerview"
+                    android:paddingHorizontal="@dimen/main_padding"
+                    android:paddingVertical="@dimen/main_padding_small">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size"
+                                android:layout_height="@dimen/icon_size"
+                                android:background="@drawable/ic_time" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:fontFamily="@font/notosanskr_regular"
+                                android:text="@string/time"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textFontWeight="500"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/margin_small"
+                                android:fontFamily="@font/bebasneue_regular"
+                                android:gravity="right"
+                                android:minWidth="26dp"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/size_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="@string/min"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textFontWeight="400"
+                                android:textSize="@dimen/size_small" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/linearSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size"
+                                android:layout_height="@dimen/icon_size"
+                                android:background="@drawable/ic_speed" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:fontFamily="@font/notosanskr_regular"
+                                android:text="@string/speed"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textFontWeight="500"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvSpeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="@dimen/margin_small"
+                                android:fontFamily="@font/bebasneue_regular"
+                                android:gravity="right"
+                                android:minWidth="26dp"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/size_big" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="@string/km_h"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textFontWeight="400"
+                                android:textSize="@dimen/size_small" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/linearHear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size"
+                                android:layout_height="@dimen/icon_size"
+                                android:background="@drawable/ic_heart_rate" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:fontFamily="@font/notosanskr_regular"
+                                android:text="@string/heartrate"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textFontWeight="500"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny"
+                            android:orientation="horizontal">
+
+                            <!--                        <TextView-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="match_parent"-->
+                            <!--                            android:layout_marginHorizontal="@dimen/margin_small"-->
+                            <!--                            android:gravity="center"-->
+                            <!--                            android:text="@string/hr"-->
+                            <!--                            android:textColor="@color/colorTextPrimary"-->
+                            <!--                            android:textFontWeight="400"-->
+                            <!--                            android:textSize="@dimen/size_small">-->
+
+
+                            <!--                        </TextView>-->
+
+                            <!--                        <TextView-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="match_parent"-->
+                            <!--                            android:layout_marginRight="@dimen/margin_small"-->
+                            <!--                            android:fontFamily="@font/bebasneue_regular"-->
+                            <!--                            android:text="&#60;"-->
+                            <!--                            android:textColor="@color/colorTextPrimary"-->
+                            <!--                            android:textSize="@dimen/size_big">-->
+
+                            <!--                        </TextView>-->
+
+                            <TextView
+                                android:id="@+id/tvHeartrate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/bebasneue_regular"
+                                android:gravity="center"
+                                android:minWidth="46dp"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="@dimen/size_big" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="@dimen/line_high"
+                        android:text="@string/start_your"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/size_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="@dimen/line_high"
+                        android:paddingHorizontal="@dimen/margin_four"
+                        android:text="Session 01"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/size_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="@dimen/line_high"
+                        android:text="@string/tab_exercise"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/size_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="@dimen/line_high"
+                        android:text="@string/following_guide"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/size_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/margin_normal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_tiny"
+                        android:background="@drawable/ic_alert_triangle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:gravity="center"
+                        android:text="@string/phone_when_exercising"
+                        android:textColor="@color/colorEdtError"
+                        android:textFontWeight="500" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnExerciseStart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/btn_enable"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="@string/btn_start"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="28sp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

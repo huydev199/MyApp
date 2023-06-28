@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backGround"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_home"
+            android:scaleType="fitCenter" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:includeFontPadding="true"
+                android:lineHeight="28sp"
+                android:text="@string/title_exercise_avareage"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextPrimary"
+                android:textFontWeight="400"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1sp"
+                android:background="@drawable/btn_cumulative"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/btnLast4Weeks"
+                    android:layout_width="77dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/btn_enable"
+                    android:gravity="center"
+                    android:text="@string/btn_last_4_weeks"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/btnCumulative"
+                    android:layout_width="77dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/btn_transparent"
+                    android:gravity="center"
+                    android:text="@string/btn_cumulative"
+                    android:textColor="@color/colorText"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_marginTop="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_heartrate"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/bg_circle_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:id="@+id/tvHeartRate"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:gravity="right"
+                    android:lineHeight="36sp"
+                    android:text="-"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="400"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imvHeartRate"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/ic_heart_rate"
+                    app:layout_constraintTop_toTopOf="@+id/tvHeartRate"
+                    app:layout_constraintLeft_toRightOf="@+id/tvHeartRate"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvHeartRate"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="bpm"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textFontWeight="400"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvHeartRate"
+                    app:layout_constraintTop_toBottomOf="@+id/imvHeartRate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heartrate"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHeartRate" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_smo2"
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:background="@drawable/bg_circle_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ctl_heartrate"
+                app:layout_constraintRight_toLeftOf="@+id/ctl_rx_exercise">
+
+                <TextView
+                    android:id="@+id/tvSmO2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="56dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="-16dp"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:gravity="right"
+                    android:text="-"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="400"
+                    android:textSize="50sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imvSmO2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/ic_muscle"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSmO2"
+                    app:layout_constraintTop_toTopOf="@+id/tvSmO2"
+                    app:layout_constraintLeft_toRightOf="@+id/tvSmO2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="%"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textFontWeight="400"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvSmO2"
+                    app:layout_constraintTop_toBottomOf="@+id/imvSmO2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SmO2"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSmO2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_rx_exercise"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/bg_circle_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/tvRxExercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-16dp"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:gravity="right"
+                    android:lineHeight="36sp"
+                    android:minWidth="38dp"
+                    android:text="-"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="400"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imvRxExercise"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="21dp"
+                    android:background="@drawable/ic_exrcise"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRxExercise"
+                    app:layout_constraintLeft_toRightOf="@+id/tvRxExercise"
+                    app:layout_constraintTop_toTopOf="@+id/tvRxExercise" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="/Week"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="400"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    app:layout_constraintLeft_toRightOf="@+id/tvRxExercise"
+                    app:layout_constraintTop_toBottomOf="@+id/imvRxExercise" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rx_exercise"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRxExercise" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/bebasneue_regular"
+            android:lineHeight="28sp"
+            android:text="@string/title_LT_RX"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextPrimary"
+            android:textFontWeight="400"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="8dp"
+            android:text="@string/title_LT_Test"
+            android:textColor="@color/colorTextPrimary"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:background="@drawable/bg_recyclerview"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:paddingHorizontal="@dimen/main_padding"
+            android:paddingVertical="10dp"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="visible"
+                android:id="@+id/ctlLTTestResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTitleStage"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:textFontWeight="500"
+                    android:text="@string/stage"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="14sp"
+                    android:lineHeight="22dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvValueStage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:gravity="right"
+                        android:text="3"
+                        android:textColor="@color/colorTextPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:text="Stage"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitleLactateOnSet"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/lactate_onset"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp"
+                    android:lineHeight="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="-1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvValueLactateOnset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:text="3.6"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/bebasneue_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:text="km/h"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitleSmO2atLactate"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    android:text="@string/SmO2_at_Lactate_4mmol"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp"
+                    android:lineHeight="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvValueSmO2atLactate4mmol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:text="68"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/bebasneue_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:text="%"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/lnNoDataAvailable"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/no_data_available"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:background="@drawable/btn_enable"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:layout_width="116dp"
+                    android:layout_height="32dp">
+                    <TextView
+                        android:id="@+id/btnGoToLtTest"
+                        android:text="@string/btn_go_to_lt_test"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/title_RX_Exercise"
+            android:textColor="@color/colorTextPrimary"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/bg_recyclerview"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:paddingHorizontal="@dimen/main_padding"
+            android:paddingTop="10dp"
+            android:paddingBottom="24sp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlRXExercise"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imvIconRun"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_run"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:textFontWeight="500"
+                    android:textSize="12sp"
+                    android:text="@string/run_for"
+                    android:textColor="@color/colorTextTitle"
+                    app:layout_constraintLeft_toRightOf="@+id/imvIconRun"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imvIconChart"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_chart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvExerciseType"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+
+                    android:gravity="right"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="500"
+                    android:textSize="12sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imvIconTime"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.485" />
+
+                <ImageView
+                    android:id="@+id/imvIconTime"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="-40dp"
+                    android:background="@drawable/ic_time"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <LinearLayout
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="right"
+                    android:layout_marginEnd="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvFrequencyPerWeek"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Times/Week"
+                        android:textSize="11sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imvIconCalendar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-8dp"
+                    android:gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imvIconSpeed">
+
+                    <TextView
+                        android:id="@+id/tvValueCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:gravity="right"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="3dp"
+                        android:text="Weeks"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imvIconSpeed"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="-40dp"
+                    android:background="@drawable/ic_speed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <LinearLayout
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="-8dp"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvSpeedBetweenWorkouts"-->
+<!--                        android:textSize="28sp"-->
+<!--                        android:fontFamily="@font/bebasneue_regular"-->
+<!--                        android:gravity="right"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:textColor="@color/colorTextPrimary"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/divideSpeed"-->
+<!--                        android:text="/"-->
+<!--                        android:textSize="28sp"-->
+<!--                        android:fontFamily="@font/bebasneue_regular"-->
+<!--                        android:gravity="right"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:textColor="@color/colorTextPrimary"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+                    <TextView
+                        android:id="@+id/tvSpeedPrescribed"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="km/h"
+                        android:textSize="11sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:paddingTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvRxExerciseNoData"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/check_info_exercise"
+                android:textSize="14sp"
+                android:textFontWeight="400"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

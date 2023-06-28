@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/trophy" />
+
+            <LinearLayout
+                android:id="@+id/llBgGoals"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <include
+                    layout="@layout/header_back_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="50dp"
+                android:text="@string/text_goals"
+                android:textSize="14sp"
+                android:width="300dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+        <!--    Trophies    -->
+        <TextView
+            android:text="@string/trophies"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/main_padding"
+            android:paddingLeft="@dimen/main_padding"
+            android:paddingRight="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_secondary"
+            android:orientation="vertical"
+            android:background="@drawable/bg_recyclerview_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/number_lt_test"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvTrophy"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!--    Medals    -->
+        <TextView
+            android:text="@string/medals"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/main_padding"
+            android:paddingLeft="@dimen/main_padding"
+            android:paddingRight="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_secondary"
+            android:orientation="vertical"
+            android:background="@drawable/bg_recyclerview_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/number_exercises"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvMedal"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!--    Medals    -->
+        <TextView
+            android:text="@string/badge"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="27dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/main_padding"
+            android:paddingLeft="@dimen/main_padding"
+            android:paddingRight="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_secondary"
+            android:orientation="vertical"
+            android:background="@drawable/bg_recyclerview_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/exercise_accumulation"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBadge"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,414 @@
+<resources>
+    <string name="app_name">REPACE</string>
+    <string name="facebook_app_id" translatable="false">995930227927922</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb995930227927922</string>
+    <string name="access_token" translatable="false">pk.eyJ1Ijoib2JlbGFiIiwiYSI6ImNrd3d6MnRqazA4bnIydXExajJpaWdmaDkifQ.ndQFEW82g3GS9MMaQjca-g</string>
+    <string name="mapbox_access_token" translatable="false">pk.eyJ1Ijoib2JlbGFiIiwiYSI6ImNrdGptc2V5cDFkNHEzMG40MjN6bW13dXYifQ.vmRkkaiJLrxsJNwOG0Y70w</string>
+    <string name="app_center_key" translatable="false">a65fa86f-198b-461f-b2d6-17567440175b</string>
+
+    <!--Error message-->
+    <string name="failure_network_connection">Network error occurred. Please try again.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="failure_movies_list_unavailable">Movies Unavailable.</string>
+    <string name="failure_movie_non_existent">Movie Not Existent.</string>
+    <string name="failure_exception">An exception error occurred</string>
+
+    <!--Invalid title-->
+    <string name="invalid_email">Invalid Email, Please Try Again.</string>
+    <string name="invalid_password">Password Must Be 8-10 Characters And Contain Both Numbers And Letters. Please Try Again.</string>
+    <string name="invalid_confirm_password">Password Do Not Match.\nPlease Try Again</string>
+    <string name="invalid_nickname">Existing Nickname. Please Try Again.</string>
+    <string name="invalid_send_email">Instructions on resetting Password has been sent to your email address.</string>
+    <!--Other-->
+    <string name="unfriend">Unfriend</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="request">Request</string>
+    <string name="cancle_request">Cancel Request</string>
+    <string name="invite_friend">Invite a Friend to REPACE</string>
+    <string name="invite">Invite</string>
+    <string name="friend_list">Friend List</string>
+    <string name="don_any_friend">You don\'t have any friends.</string>
+    <string name="any_friend">You didn\'t get any friend requests.</string>
+    <string name="friend_request">Friend Request</string>
+    <string name="search_friends_face">Search Friend from Facebook</string>
+    <string name="friend_rec">Friend Recommendation</string>
+    <string name="search_friends">Search by NickName or Email address</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="user_name">USER NAME</string>
+    <string name="content_description_empty">No content description.</string>
+    <string name="text_policy">\u0020 \u0020 \u0020 \u0020 Check to receive notifications on activity reminders, Prescription (Rx) exercise schedules, events, benefits, and latest updates. (Optional)</string>
+    <string name="text_policy_sub">By signing up, you agree to REPACE’s </string>
+    <string name="double_back_to_exit">Please click BACK again to exit</string>
+    <string name="available_nickname">Available Nickname.</string>
+    <string name="intro_additional_info">For a more accurate prescription exercise solution, we will need the following information. Additional information will help us personalize your exercise plan.</string>
+    <string name="welcome_content">Start making your physical exercise more scientific and effective with REPACE at your side.!</string>
+    <string name="welcome_tutorial">Welcome to REPACE Prescription (Rx) Exercise Program!</string>
+    <string name="setup_device">Set Up Your REPACE Device</string>
+    <string name="remind_pairing">Make Sure Your REPACE Device Is Turned On If It Is Fresh Out Of The Box.</string>
+    <string name="allowing_access">By allowing access, REPACE will be able to send your activity reminders, exercise data, etc.</string>
+    <string name="re_open_app_to_change_language">Please reopen the app to update the language</string>
+    <string name="app_version">Ver</string>
+    <string name="heartrate">Heartrate</string>
+    <string name="SmO2" translatable="false">SmO2</string>
+    <string name="rx_exercise">Rx Exercise</string>
+    <string name="stage">Stage</string>
+    <string name="lactate_onset">Lactate Onset</string>
+    <string name="lactate_onset_secondary">Lactate onset</string>
+    <string name="onset">Onset</string>
+    <string name="SmO2_at_Lactate_4mmol">SmO2 at Lactate 4mmol</string>
+    <string name="run_for">Run for</string>
+    <string name="check_info_exercise">Check Out the Information  from Your Latest Exercise</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="content_tutorial">Muscle oxygenation is particularly important for both endurance and power of a muscle because it is necessary to produce ATP to power muscle cells to contract. Heart rate and blood oxygen delivery are helpful for getting an idea of an athlete\\\'s efficiency, but they do not tell the whole story for the muscle.  \n\nPhysical exercise performed at different intensities promotes distinct physiological responses during both activity and recovery process.  High-intensity and short-volume efforts are widely used in the sports context and have also been extensively adopted in non-athlete training programs.  \n\nREPACE Prescription (Rx) Exercise Program utilizes muscle oxygenation level measured real-time during your exercise to provide the best Exercise Program suited to your body condition. \n\nStart now by completing LT TEST to find out what’s best for you.</string>
+    <string name="or">or</string>
+    <string name="title_dialog_google_login">REPACE wants to use “google.com” to Log In</string>
+    <string name="title_dialog_facebook_login">REPACE wants to use “facebook.com” to Log In</string>
+    <string name="title_dialog_google_signup">REPACE wants to use “google.com” to Sign up</string>
+    <string name="title_dialog_facebook_signup">REPACE wants to use “facebook.com” to Sign up</string>
+    <string name="content_dialog_google">This allows the app and the website to share information about you.</string>
+    <string name="content_dialog_lt_test_stop">Are you sure you want to exit? \nWhen stopped, no data is saved.</string>
+    <string name="content_dialog_free_lt_test">Are you sure you want to exit? \nWhen stopped, data will be saved</string>
+    <string name="lt_test">LT Test</string>
+    <string name="short_lt_test_info">You can estimate your Lactate Onset timing simply by running in accordance with LT TEST guidance.\n\nYou can obtain a more accurate information by complying with a few simple conditions.</string>
+    <string name="more_lt_test_info">REPACE measures your muscle oxygenation (SmO2) while you exercise and allows you to check when your muscles have reached increased use of carbohydrates by calculating the timing of the first Lactate Onset.\n\nYour muscles use up more oxygen in the body during exercise than when you are relaxing or resting.
+\n\nFor your body to remain physically fit to endure challenging activities and improve cardiovascular fitness at the same time, it is important to delay the timing of the first Lactate Onset (i.e., rightward shift of the exponential lactate curve) by keeping up with regular exercises with intensity level just right for you.
+\n\nREPACE will help you deal with such first Lactate Onset time. Become a smart runner and perform regular LT TESTs to determine what exercise level is right for you. Follow the Prescription Exercise (Rx Exercise) recommended by REPACE and see whether first Lactate Onset time has indeed been delayed for your improving endurance.
+\n\nFor best results, it is important to perform LT TEST as well as Prescription Exercises in an environment that offers consistent pace and speed, such as at a treadmill.</string>
+    <string name="tl_test_sub_title">Lactate Threshold Test (LT Test)</string>
+    <string name="lt_test_summary_off_intro_sub1">LT TEST takes into account the amount of exercises that you do in your daily life. REPACE measures and analyzes SmO2 shown during each LT TEST Stage.</string>
+    <string name="lt_test_summary_off_intro_sub2">Each Stage consists of 5minute running, and automatically ends when the targeted exercise amount is met.</string>
+    <string name="lt_test_user_manual_sub1">For a more accurate result, Treadmill Running LT TEST is recommended.</string>
+    <string name="lt_test_user_manual_sub2">Personalized Prescription Exercise is accessible when LT TEST is complete.</string>
+    <string name="warning_press_stop">Prescription (Rx) Exercise will not be available if you press STOP at any time before LT TEST is complete</string>
+    <string name="lt_test_protocol">LT Test Protocol</string>
+    <string name="e_mail">E-mail</string>
+    <string name="start_speed">Start Speed</string>
+    <string name="increase_speed_stage">Increase in Speed / Stage</string>
+    <string name="rest_time">Rest Time</string>
+    <string name="stage_time">Stage Time</string>
+    <string name="seconds">seconds</string>
+    <string name="minutes">minutes</string>
+    <string name="km_h" translatable="false">km/h</string>
+    <string name="percent" translatable="false">%</string>
+    <string name="bpm" translatable="false">bpm</string>
+    <string name="kcal" translatable="false">kcal</string>
+    <string name="test_on">Test On</string>
+    <string name="test">Test</string>
+    <string name="treadmill">Treadmill</string>
+    <string name="outdoor">Outdoor</string>
+    <string name="user_type">User Type</string>
+    <string name="ordinary_person">Ordinary \nPerson</string>
+    <string name="sportsman_running">Sportsman \n(Running)</string>
+    <string name="sportsman_etc">Sportsman \n(etc.)</string>
+    <string name="time">Time</string>
+    <string name="distance">Distance</string>
+    <string name="number">Number</string>
+    <string name="hour_day">Hour / Day</string>
+    <string name="km_exercise">Km / Exercise</string>
+    <string name="times_week">Times / Week</string>
+    <string name="times_week_br">Times\n/Week</string>
+    <string name="detail_hour_day">Average Exercise Duration performed per Day</string>
+    <string name="detail_km_exercise">Average Distance reached per Exercise</string>
+    <string name="detail_times_week">Average Number of Exercise performed per Week</string>
+    <string name="will_start_in">Will Start in</string>
+    <string name="quote" translatable="false">’’</string>
+    <string name="adjust_treadmill_speed">Adjust Treadmill Speed to</string>
+    <string name="run">RUN!</string>
+    <string name="do_not_walk">Do Not Walk</string>
+    <string name="complete_test">Complete LT TEST and get personalized exercise prescription!</string>
+    <string name="free_exercise">Free Exercise</string>
+    <string name="free_exercise_result">Free Exercise Result</string>
+    <string name="maintain_your_pace">Maintain Your Pace at</string>
+    <string name="flat_outdoor_track">On Flat Outdoor Track</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="total_distance">Total Distance</string>
+    <string name="duration">Duration</string>
+    <string name="speed_up">Speed Up to Maintain Target Speed</string>
+    <string name="speed_down">Speed Down to Maintain Target Speed</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="lt_test_complete">LT TEST is completed</string>
+    <string name="exercise_is_complete">Exercise is completed</string>
+    <string name="lt_test_performance">LT Test Performance</string>
+    <string name="lactate_threshold_info">Lactate Threshold Info.</string>
+    <string name="do_not_show_again">Do Not Show Again</string>
+    <string name="session">Session</string>
+    <string name="title_lt_test_prescription">LT Test Prescription (RX) Exercise</string>
+    <string name="min">Min</string>
+    <string name="min_lowercase">min</string>
+    <string name="speed">Speed</string>
+    <string name="hr">HR</string>
+    <string name="start_your">Start your </string>
+    <string name="following_guide">following the guide from LT TEST result </string>
+    <string name="phone_when_exercising">Carry your Cellular Phone when Exercising</string>
+    <string name="rest">REST</string>
+    <string name="relax_enjoy">You can relax and enjoy</string>
+    <string name="your_session">your Session </string>
+    <string name="high_intensity">High Intensity Exercise</string>
+    <string name="exercise_purpose">Exercise Purpose</string>
+    <string name="recovery_ability">Recovery ability &amp; General performance</string>
+    <string name="content_recovery_ability">It can improve fat oxidation and regeneration of the energy, resulting in enhanced recovery ability (improving first lactate onset).</string>
+    <string name="weight_loss">weight loss</string>
+    <string name="weight_loss_content">Low-intensity can improve fat oxidation and regeneration of the energy.
+Also, it is helpful for your weight reduction because it improves exercise substrate oxidation, energy efficiency, perceived exertion following exercise, fasting glucose-insulin homeostasis, and the fat profile. </string>
+    <string name="maximal_aerobic_performance">Maximal aerobic performance</string>
+    <string name="maximal_aerobic_performance_content">Polarized Training elicits superior cardiorespiratory and metabolic adaptations as maximal aerobic performance (VO2max/VO2peak) compared to high-intensity interval exercise or moderate-intensity endurance training alone. </string>
+    <string name="warning_press_stop_exercise">Data will not be available if you press STOP at any time before Prescription (Rx) Exercise is complete</string>
+    <string name="warning_press_stop_free_exercise">Data will not be saved if you press STOP at any time to  complete free exercise</string>
+    <string name="input_total_distance">Input \nTotal Distance</string>
+    <string name="last_stage">Last Stage</string>
+    <string name="max_speed">Max. Speed</string>
+    <string name="min_speed">Min. Speed</string>
+    <string name="avg_speed">Avg. Speed</string>
+    <string name="total_duration">Total Duration</string>
+    <string name="lactate_threshold_info_more">This data represents your running speed when a sharp lactate increase up to 4mmol occurs. From this data, we recalculate your running speed when lactate started accumulating in your body. This event is called Lactate Onset. The longer you exercise without reaching Lactate Onset, the higher your endurance level is to physical challenges. Look forward to the marked improvements in your body fitness by synchronizing exercises with your Lactate Onset data.</string>
+    <string name="min_smo2">Min. SmO2</string>
+    <string name="max_smo2">Max. SmO2</string>
+    <string name="distance_Speed">Distance / Speed</string>
+    <string name="smo2_heartrate">SmO2 / Heartrate</string>
+    <string name="minhr">Min. HR</string>
+    <string name="maxhr">Max. HR</string>
+    <string name="avghr">Avg. HR</string>
+    <string name="avg_smo2">Avg. SmO2</string>
+    <string name="min_heartrate">Min. Heartrate</string>
+    <string name="max_heartrate">Max. Heartrate</string>
+    <string name="avg_heartrate">Avg Heartrate</string>
+    <string name="exercise_info">Exercise Info.</string>
+    <string name="heartrate_at_lactate">Heartrate at (Lactate-4mmol)</string>
+    <string name="heartrate_at_first_onset_point">Heartrate at the first onset point</string>
+    <string name="pace">Pace</string>
+    <string name="smo2_percent" translatable="false">SmO2 (%)</string>
+    <string name="estimated_lactate">Estimated Lactate</string>
+    <string name="heartrate_bpm">Heartrate (bpm)</string>
+    <string name="polarized_training">Polarized Training</string>
+    <string name="text_polarized_training">This is a VO2 max / VO2 peak improving exercise that facilitates your fat burn and helps with weight loss.</string>
+    <string name="text_polarized_training_continue">Alternating low intensity exercise and high intensity exercise without missing sessions is recommended.</string>
+    <string name="text_low_intensity">This is a competency improving exercise that facilitates your overall endurance level.</string>
+    <string name="text_low_intensity_continue">Consistent and regular exercise is recommended.</string>
+    <string name="run_on_a_treadmill_long">Run on a Treadmill or a Flat Outdoor Track in alternating speeds set for each designated Day.</string>
+    <string name="continue_for">Continue for</string>
+    <string name="week">week,</string>
+    <string name="at_the_end_of">At the end of the</string>
+    <string name="th_week">th week,</string>
+    <string name="th_week_next">complete another LT TEST to obtain Prescription (Rx) Exercise optimized for your current body.</string>
+    <string name="run_on_a_treadmill_short">Run on a Treadmill or a Flat Outdoor Track,</string>
+    <string name="at_least">At least</string>
+    <string name="time_a_week">times a week,</string>
+    <string name="in">In</string>
+    <string name="km_hour_speed">Km/hour speed,</string>
+    <string name="for_text">For</string>
+    <string name="hour_without_break">hour without break.</string>
+    <string name="smO2_lactate_4mmol">SmO2  @Lactate 4mmol</string>
+    <string name="rx_exercise_result">RX Exercise Result</string>
+    <string name="calorie">Calorie</string>
+    <string name="treadmill_running">Treadmill Running</string>
+    <string name="outdoor_running">Outdoor Running</string>
+    <string name="trophies">Trophies</string>
+    <string name="medals">Medals</string>
+    <string name="badge">Badge</string>
+    <string name="number_lt_test">Number of complete LT TEST</string>
+    <string name="number_exercises">Number of consecutive exercises</string>
+    <string name="exercise_accumulation">Exercise accumulation</string>
+    <string name="comp">complete</string>
+    <string name="times">times</string>
+    <string name="title_disconnected">Disconnected</string>
+    <string name="content_disconnected">Check to see if REPACE device is connected via BLE</string>
+    <string name="fb_login_cancelled">Facebook login cancelled</string>
+    <string name="fb_login_failed">Facebook login failed</string>
+    <string name="text_goals">Trophies to congratulate you when you complete LT TEST</string>
+
+    <!--  Exercise More  -->
+    <string name="title_high_more">High Intensity Exercise (H.I.E.)</string>
+    <string name="title_low_more">Low Intensity Exercise (L.I.E.)</string>
+    <string name="content_high_bold_more">High intensity improves cardiovascular fitness as measured by maximal oxygen uptake (VO2max) and includes repeated rounds of exercise that achieve > 90% of maximal heart rate (HRmax), the second ventilatory threshold, over second lactate threshold , and > 85% of peak and maximal oxygen uptake (VO2peak and VO2max).</string>
+    <string name="content_low_bold_more">This is a competency improving exercise that facilitates your general endurance level (low to high-intensity exercise performance).</string>
+    <string name="content_high_regular_more">Alternating low-intensity exercise and high-intensity exercise without missing sessions are recommended. It is called the Polarized Training(PT)
+\n\nPT elicits superior cardiorespiratory and metabolic adaptations as maximal aerobic performance (VO2max/VO2peak) compared to high-intensity interval exercise or moderate-intensity endurance training alone.
+\n\nAlso, PT is helpful for your weight reduction because it improves exercise substrate oxidation, energy efficiency, perceived exertion following exercise, fasting glucose-insulin homeostasis, and the fat profile.</string>
+    <string name="content_low_regular_more">Consistent and regular exercise is recommended.
+\n\nLIE can improve fat oxidation and regeneration of the energy, resulting in enhanced recovery ability (improving first lactate onset).
+\n\nThis is called improving metabolic flexibility, reflecting the ability to utilize efficiently fat and carbohydrate, mitochondrial function, and aerobic capacity.
+\n\nFurthermore, LIE is helpful who train high-intensity exercises (strength and interval training). They need this recovery ability to optimize the repeated high-intensity exercise session because of the need for energy regeneration.</string>
+    <string name="instruction_content_1">Insert the REPACE into the holder according to the shape of the sensor hole.</string>
+    <string name="instruction_content_2">Insert it into the band so that the REPACE power button is directing upward.</string>
+    <string name="instruction_content_3">Slide the band on your right thigh that the center mark on the band is place in the center of your knee.</string>
+    <string name="instruction_content_4">Take a sit and straighten your legs then wear the lowermost bottom of the band is 10cm upward from the kneecap.</string>
+    <string name="hold_steady">Hold steady, REPACE is calibrating</string>
+    <string name="please_wait">The App is setting the personal time. Please wait.</string>
+    <string name="facebook_friends">Facebook Friends on REPACE</string>
+    <!--Button title-->
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_check">Check</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_troubleshoot">Troubleshoot</string>
+    <string name="btn_later">Later</string>
+    <string name="btn_signup">AGREE &amp; CONTINUE</string>
+    <string name="btn_start_pairing">Start Pairing</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_connecting">Connecting</string>
+    <string name="btn_connected">Connected</string>
+    <string name="btn_allow_access">Allow access</string>
+    <string name="btn_notification">Notification</string>
+    <string name="btn_narration_guide">Narration Guide</string>
+    <string name="btn_preference">Preference</string>
+    <string name="btn_notice">Notice</string>
+    <string name="btn_version">Version</string>
+    <string name="btn_terms_of_us">Terms of Use</string>
+    <string name="btn_privacy_policy">Privacy Policy</string>
+    <string name="btn_help">Help</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_logout">Log Out</string>
+    <string name="btn_push_notifications">Push Notifications</string>
+    <string name="btn_email_notifications">Email Notifications</string>
+    <string name="btn_capture_from_camera">Capture From Camera</string>
+    <string name="btn_pick_image">Pick Image</string>
+    <string name="btn_send_email">Send Email</string>
+    <string name="btn_cumulative">Cumulative</string>
+    <string name="btn_last_4_weeks">Last 4 Weeks</string>
+    <string name="btn_start_lt_test">START LT TEST</string>
+    <string name="btn_set_protocol">Set Protocol</string>
+    <string name="btn_set_preference">Set Preference</string>
+    <string name="btn_go_to_lt_test">Go to LT Test</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_finish">Finish</string>
+    <!-- Screen Title -->
+    <string name="title_nickname">Enter nickname</string>
+    <string name="title_signup">Sign up</string>
+    <string name="title_additional_info">Additional Info</string>
+    <string name="title_login">Log In</string>
+    <string name="title_forget_password">Forgot Password</string>
+    <string name="title_terms_of_use">Terms Of Use</string>
+    <string name="title_privacy_policy">Privacy policy</string>
+    <string name="title_enter_email">Enter email</string>
+    <string name="title_preference">Reference</string>
+    <string name="title_pairing">Pairing</string>
+    <string name="title_notification_access">Notification access</string>
+    <string name="title_me">Me</string>
+    <string name="title_profile_setting">Profile Setting</string>
+    <string name="title_notice">Notice</string>
+    <string name="title_lt_test_history">LT Test History</string>
+    <string name="title_exercise_statistic" translatable="false">EXERCISE STATISTICS</string>
+    <string name="title_exercise_history">Exercise History</string>
+    <string name="title_exercise_statistics">Exercise Statistics</string>
+    <string name="title_goals">Goals</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_add_friends">Add Friends</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_narration_guide">Narration Guide</string>
+    <string name="title_notices">Notices</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_statistics_by_day">Statistics By Day</string>
+    <string name="title_statistics_by_week">Statistics By WEEK</string>
+    <string name="title_statistics_by_month">Statistics By Month</string>
+    <string name="title_exercise_avareage">My Exercise Average</string>
+    <string name="title_friend_exercise_avareage">Exercise Average</string>
+    <string name="title_LT_RX">My LT TEST RX EXERCISE</string>
+    <string name="title_friend_LT_RX">LT TEST RX EXERCISE</string>
+    <string name="title_LT_Test">LT Test Result</string>
+    <string name="title_RX_Exercise">RX Exercise</string>
+    <string name="title_LT_Test_Setting">Exercise Amount Setting</string>
+    <string name="title_low_exercise">Low Intensity Exercise</string>
+    <string name="title_exercise_prescription">Exercise Prescription (Rx)</string>
+    <string name="title_prescription_rx_exercise">Prescription (Rx) Exercise</string>
+    <string name="title_treadmill_running_low_intensity">Treadmill Running - Low Intensity</string>
+    <string name="title_treadmill_running_high_intensity">Treadmill Running - High Intensity</string>
+    <string name="title_outdoor_running_low_intensity">Outdoor Running - Low Intensity</string>
+    <string name="title_outdoor_running_high_intensity">Outdoor Running - High Intensity</string>
+
+    <!-- Hint Text -->
+    <string name="hint_nickname">Nickname</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_birthdate">Birthdate</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_height">Height</string>
+    <string name="hint_weight">Weight</string>
+    <string name="hint_default_email">obelab@obelab.com</string>
+    <string name="hint_push_notification">Send me LT TEST based Prescription (Rx) exercise reminders, motivations, marketing, and other push notifications. </string>
+    <string name="hint_email_notification">Send me REPACE updates, new features, functions, and personalized data, promotions, and benefits via email.</string>
+    <string name="hint_support">Support</string>
+
+    <!-- Label -->
+    <string name="label_language_setting">Language Setting</string>
+    <string name="label_units_of_measure">Units of Measure</string>
+    <string name="label_profile_disclosure">Profile Disclosure</string>
+
+    <!-- Language -->
+    <string name="language_en">English</string>
+    <string name="language_ko">Korean</string>
+    <!-- Unit -->
+    <string name="unit_metric">Metric</string>
+    <string name="unit_imperial">Imperial</string>
+    <!-- Profile disclosure -->
+    <string name="profile_disclosure_all">All</string>
+    <string name="profile_disclosure_friends">Friends</string>
+    <string name="profile_disclosure_none">None</string>
+    <!-- Tabs -->
+    <string name="tab_lt_test">LT Test</string>
+    <string name="tab_exercise">Exercise</string>
+    <string name="tab_me">Me</string>
+    <string name="welcome">WELCOME!</string>
+
+    <!--    -->
+    <string name="content_one_session_per_day">Rx Exercise Can Proceed with 1 Session per Day.</string>
+    <string name="km">km</string>
+    <string name="average">average</string>
+    <string name="m7days">7 Days</string>
+    <string name="m4weeks">4 Weeks</string>
+    <string name="m1year">1 Year</string>
+    <string name="no_record_of_exercising">You have no record of exercising.</string>
+    <string name="cycling">Cycling</string>
+    <string name="moutain_climbing">Mountain Climbing</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="other">other</string>
+    <string name="choose_gender">Choose your gender</string>
+    <string name="tv_sub_policy_1">By signing up, you agree to REPACE’s \u0020</string>
+    <string name="tv_sub_policy_2">\u0020 and \u0020</string>
+    <string name="tv_sub_policy_3">Privacy Policy.</string>
+    <string name="connection_complete">Connection Complete!</string>
+    <string name="pairing_repace_device">Pairing REPACE device</string>
+    <string name="no_data_from_device">No data from device. Please try again.</string>
+
+    <string name="noti_no_chart_data">No Chart Data Available</string>
+    <string name="btn_instructions">Instructions</string>
+    <string name="tts_lt_test_pre_treadmill">Stage %1$d will start in 30 seconds. Set Treadmill Speed to %2$.1f km per hour. Run for 5 minutes, do not walk.</string>
+    <string name="tts_lt_test_pre_treadmill_second">Stage %1$d completed.</string>
+    <string name="tts_lt_test_pre_treadmill_third">Stage %1$d will start in 30 seconds.</string>
+    <string name="tts_lt_test_pre_treadmill_four">Set Treadmill Speed to %1$.1f km per hour. Run for 5 minutes, do not walk.</string>
+
+    <string name="tts_lt_test_pre_outdoor">Stage %1$d will start in 30 seconds. Maintain your pace at %2$.1f km per hour. Run for 5 minutes on a flat outdoor track, do not walk.</string>
+    <string name="tts_lt_test_pre_outdoor_second">Stage %1$d completed.</string>
+    <string name="tts_lt_test_pre_outdoor_third">Stage %1$d will start in 30 seconds.</string>
+    <string name="tts_lt_test_pre_outdoor_four">Maintain your pace at %1$.1f km per hour. Run for 5 minutes on a flat outdoor track, do not walk.</string>
+    <string name="tts_lt_test_complete">Congratulations! Your LT TEST is complete.</string>
+
+    <string name="tts_rx_exercise_pre_treadmill">Start running in 30 seconds. Set treadmill speed to %1$.1f km per hour. Run for %2$d minutes, do not walk.</string>
+    <string name="tts_rx_exercise_pre_outdoor">Start running in 30 seconds. Maintain your pace at %1$.1f km per hour. Run for %2$d minutes, do not walk.</string>
+    <string name="tts_rx_exercise_pre_free">Start running in 30 seconds.</string>
+
+    <string name="tts_start_running">Start running.</string>
+    <string name="tts_good_start">Good start!</string>
+    <string name="tts_allready_10_minutes">Already 10 minutes!</string>
+    <string name="tts_keep_running">Keep running!</string>
+    <string name="tts_let_go">Let’s go!</string>
+    <string name="tts_halfway_through">Halfway through!</string>
+    <string name="tts_20_minutes_to_go">20 minutes to go!</string>
+    <string name="tts_10_minutes_to_go">10 minutes to go!</string>
+    <string name="tts_almost_there">Almost there!</string>
+    <string name="tts_workout_competed">Workout completed!</string>
+    <string name="tts_workout_paused">Workout paused.</string>
+    <string name="tts_workout_resumed">Workout resumed.</string>
+    <string name="tts_workout_stopped">Workout stopped.</string>
+    <string name="tts_smo2_level_too_low">Your SmO2 level is too low. Slow down or take rest.</string>
+    <string name="tts_5minuetes_time">Time 5 minutes, distance 0.3 km, 5 minutes average pace 3.6 km per hour</string>
+
+    <string name="bluetooth_deined">Bluetooth permission denied , please  accept permission or go to setting to enable it</string>
+</resources>

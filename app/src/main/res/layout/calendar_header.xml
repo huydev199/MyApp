@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp">
+    <View
+        android:background="@color/colorTextPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <include
+        android:id="@+id/legendLayout"
+        layout="@layout/calendar_day_legend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30"
+        android:layout_gravity="center" />
+    <View
+        android:id="@+id/footerCalender"
+        android:background="@color/colorTextPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

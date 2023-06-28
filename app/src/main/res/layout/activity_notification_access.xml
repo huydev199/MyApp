@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/viewTitlePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/header_back" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/allowing_access"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTitlePage"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="18sp"
+        android:lineSpacingMultiplier="0"
+        android:justificationMode="inter_word"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnAllowAccess"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_enable"
+            android:text="@string/btn_allow_access"
+            android:textColor="@color/colorTextPrimary"
+            android:fontFamily="@font/bebasneue_regular"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvLate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_later"
+            android:textColor="@color/btnColor"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

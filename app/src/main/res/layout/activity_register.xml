@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/backGround">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/header_back" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/hint_email"
+                android:minHeight="48dp"
+                android:textColorHint="@color/colorText"
+                app:hintTextColor="@color/colorTextHit">
+
+                <EditText
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:id="@+id/edtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingTop="3dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="text|textEmailAddress"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textSize="14sp"
+                    android:textFontWeight="500"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/hint_password"
+                android:minHeight="48dp"
+                android:textColorHint="@color/colorText"
+                app:hintTextColor="@color/colorTextHit">
+
+                <EditText
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:id="@+id/edtPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingTop="3dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textSize="14sp"
+                    android:textFontWeight="500"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/hint_confirm_password"
+                android:minHeight="48dp"
+                android:textColorHint="@color/colorText"
+                app:hintTextColor="@color/colorTextHit">
+
+                <EditText
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:id="@+id/edtConfirmPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingTop="3dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textSize="14sp"
+                    android:textFontWeight="500"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlvPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="0dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/cbPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-6dp"
+                    android:layout_marginTop="1dp"
+                    android:buttonTint="#FFFFFF"
+                    android:textColor="@color/colorText" />
+
+                <TextView
+                    android:id="@+id/tvPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:lineSpacingExtra="20sp"
+                    android:lineSpacingMultiplier="0"
+                    android:text="@string/text_policy"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textFontWeight="400" />
+
+                <TextView
+                    android:id="@+id/tvPolicySub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPolicy"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:lineHeight="18sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorLink="@color/colorTextPrimary" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/rlvPolicy"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="18sp"
+                android:background="@drawable/btn_disable"
+                android:text="@string/btn_signup"
+                android:textColor="@color/colorText"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3sp"
+                    android:background="@color/colorLine" />
+
+                <TextView
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/or"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="3sp"
+                    android:background="@color/colorLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSocialGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_social"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_social_size"
+                    android:layout_height="@dimen/icon_social_size"
+                    android:layout_marginHorizontal="15dp"
+                    android:src="@drawable/ic_social_google" />
+
+                <TextView
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Continue with Google"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/btnSocialFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/btn_social"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="@dimen/icon_social_size"
+                    android:layout_height="@dimen/icon_social_size"
+                    android:layout_marginHorizontal="15dp"
+                    android:src="@drawable/ic_social_facebook" />
+
+                <TextView
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Continue with Facebook"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/btnSocialApple"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/button_height"-->
+<!--                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"-->
+<!--                android:layout_marginTop="18dp"-->
+<!--                android:background="@drawable/btn_social"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/icon_social_size"-->
+<!--                    android:layout_height="@dimen/icon_social_size"-->
+<!--                    android:layout_marginHorizontal="15dp"-->
+<!--                    android:src="@drawable/ic_social_apple" />-->
+
+<!--                <TextView-->
+<!--                    android:fontFamily="@font/notosanskr_regular"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Continue with Apple"-->
+<!--                    android:textColor="@color/colorTextPrimary"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

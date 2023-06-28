@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDialog"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_instructions"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_40"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/btn_instructions"
+            android:textSize="16sp"
+            android:lineHeight="24sp"
+            android:textFontWeight="400"
+            android:textColor="@color/colorPrimaryTitle" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_marginTop="-15dp" />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/ciInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:ci_animator="@animator/default_animation"
+            app:ci_drawable="@drawable/bg_indicator_selected"
+            app:ci_drawable_unselected="@drawable/bg_indicator" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin_secondary"
+            android:layout_marginBottom="@dimen/margin_16">
+
+            <CheckBox
+                android:id="@+id/cbDoNotShowAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/btnLogin"
+                android:text="@string/do_not_show_again"
+                android:textColor="@color/btnLogin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_next"
+                android:textColor="@color/btnColorCommon"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:padding="@dimen/margin_4"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:lineHeight="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

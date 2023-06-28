@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_back" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_email"
+        android:minHeight="48dp"
+
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+        <EditText
+            android:id="@+id/edtEmail"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="3dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text|textEmailAddress"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_password"
+
+        android:minHeight="48dp"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+        <EditText
+            android:id="@+id/edtPassword"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text=""
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="3dp"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="textPassword"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorText"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/logIn"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_disable"
+        android:fontFamily="@font/bebasneue_regular"
+        android:enabled="false"
+        android:text="@string/title_login"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_header" />
+
+    <TextView
+        android:id="@+id/tvForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/title_forget_password"
+        android:textColor="@color/btnColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorLine" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/or"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnSocialGoogle"
+        android:background="@drawable/btn_social"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_social_google"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="@dimen/icon_social_size"
+            android:layout_height="@dimen/icon_social_size"/>
+        <TextView
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="Continue with Google"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnSocialFacebook"
+        android:background="@drawable/btn_social"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/ic_social_facebook"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="@dimen/icon_social_size"
+            android:layout_height="@dimen/icon_social_size"/>
+        <TextView
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="Continue with Facebook"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btnSocialApple"-->
+<!--        android:background="@drawable/btn_social"-->
+<!--        android:layout_marginTop="18dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/button_height"-->
+<!--        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+<!--        <ImageView-->
+<!--            android:src="@drawable/ic_social_apple"-->
+<!--            android:layout_marginHorizontal="15dp"-->
+<!--            android:layout_width="@dimen/icon_social_size"-->
+<!--            android:layout_height="@dimen/icon_social_size"/>-->
+<!--        <TextView-->
+<!--            android:fontFamily="@font/notosanskr_regular"-->
+<!--            android:text="Continue with Apple"-->
+<!--            android:textColor="@color/colorTextPrimary"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>

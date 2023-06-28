@@ -1,0 +1,11 @@
+<resources>
+    <string name="movies_screen_title" translatable="false">Movies</string>
+    <string name="movie_details_screen_title" translatable="false">Movie Details</string>
+    <string name="movie_details_summary" translatable="false">Summary</string>
+    <string name="movie_details_cast" translatable="false">Cast</string>
+    <string name="movie_details_director" translatable="false">Director</string>
+    <string name="movie_details_year" translatable="false">Year</string>
+
+    <!-- Animations -->
+    <string name="movie_transition_poster" translatable="false">moviePosterTransition</string>
+</resources>

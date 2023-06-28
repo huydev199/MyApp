@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="36dp">
+
+        <include
+            layout="@layout/header_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civAvatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_avatar_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civChangeAvatar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="-26dp"
+                    android:layout_marginTop="-28dp"
+                    android:src="@drawable/ic_img"
+                    app:layout_constraintLeft_toRightOf="@id/civAvatar"
+                    app:layout_constraintTop_toBottomOf="@id/civAvatar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/e_mail"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="#00000000"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textSize="14sp"
+
+                    tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_padding"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvNickname"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_nickname"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:hint="@string/hint_nickname"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="@dimen/margin_20"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_padding"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvBirthdate"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_birthdate"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtBirthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@drawable/edit_text_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:hint="@string/hint_birthdate"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_padding"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_gender"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:gravity="center_vertical"
+                    android:id="@+id/edtGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:hint="@string/hint_gender"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_padding"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_height"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@drawable/edit_text_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:hint="@string/hint_height"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="@dimen/width_82"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_weight"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:background="@drawable/edit_text_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:hint="@string/hint_weight"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorText"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/rlvPolicy"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/btn_enable"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="@string/btn_save"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="@string/btn_logout"
+            android:textColor="@color/btnColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

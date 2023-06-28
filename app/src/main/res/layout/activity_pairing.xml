@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_back" />
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleStatus"
+                android:text="@string/setup_device"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_bluetooth"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_pairing"
+                    android:layout_gravity="center"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    android:visibility="invisible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_pairing"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_bluetooth"
+                    android:layout_gravity="center"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_bluetooth_disable"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvRemindPairing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="18dp"
+                android:paddingHorizontal="@dimen/main_padding_small"
+                android:gravity="center"
+                android:text="@string/remind_pairing"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/rcvListDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_recyclerview"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="18dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnSearchPairing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/civ_pairing"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_enable"
+                android:text="@string/btn_search"
+                android:textColor="@color/colorTextPrimary"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvTroubleshoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/btn_troubleshoot"
+                android:textColor="@color/btnColor"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

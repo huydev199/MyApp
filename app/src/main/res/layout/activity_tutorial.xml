@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround"
+    android:fillViewport="true"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_back" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:lineHeight="20sp"
+            android:textStyle="bold"
+            android:text="@string/welcome_tutorial"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:lineHeight="18sp"
+            android:textFontWeight="400"
+            android:text="@string/content_tutorial"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_marginBottom="@dimen/margin_20"
+            app:layout_constraintBottom_toTopOf="@id/tvLate"
+            android:id="@+id/btnPairing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_enable"
+            android:text="@string/btn_start_pairing"
+            android:textColor="@color/colorTextPrimary"
+            android:fontFamily="@font/bebasneue_regular"
+            android:textSize="28sp" />
+
+        <TextView
+
+            android:layout_marginBottom="@dimen/width_28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/tvLate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_later"
+            android:textColor="@color/btnColor"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

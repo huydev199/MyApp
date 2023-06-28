@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+    <include
+        layout="@layout/header_back_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:gravity="end"
+
+            >
+            <TextView
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14sp"
+                android:textFontWeight="500"
+                android:text="@string/session"
+                android:textColor="@color/colorTextTitle"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvSession"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bebasneue_regular"
+                android:text="0"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="48sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanskr_regular"
+                android:gravity="center"
+                android:lineHeight="44dp"
+                android:text="@string/rest"
+                android:textColor="@color/colorTextHit"
+                android:textFontWeight="700"
+                android:textSize="@dimen/size_large"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_padding"
+                android:fontFamily="@font/notosanskr_regular"
+                android:text="@string/relax_enjoy"
+                android:textColor="@color/colorTextPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/size_tiny"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="@string/your_session"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_tiny"/>
+                <TextView
+                    android:id="@+id/tvCurrentSession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:layout_marginLeft="4dp"
+                    android:text="00"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_tiny"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnExerciseRest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/rlvPolicy"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:background="@drawable/btn_enable"
+            android:text="@string/rest"
+            android:textColor="@color/colorTextPrimary"
+            android:fontFamily="@font/bebasneue_regular"
+            android:textSize="@dimen/size_big" />
+    </LinearLayout>
+
+</LinearLayout>

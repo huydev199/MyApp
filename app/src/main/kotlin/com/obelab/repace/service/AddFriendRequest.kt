@@ -1,0 +1,19 @@
+package com.obelab.repace.service
+
+import com.obelab.repace.core.exception.Failure
+import com.obelab.repace.core.functional.Either
+import com.obelab.repace.core.interactor.UseCase
+import com.obelab.repace.model.RequestUserUpdateModel
+import com.obelab.repace.model.ResBaseModel
+import com.obelab.repace.model.DeleteFriendRequestModel
+import com.obelab.repace.model.RequestAddFriendModel
+import com.obelab.repace.repository.AppRepository
+import javax.inject.Inject
+
+class AddFriendRequest
+@Inject constructor(private val repository: AppRepository) : UseCase<ResBaseModel, RequestAddFriendModel>() {
+    override suspend fun run(params: RequestAddFriendModel) = repository.addFriendRequest(params)
+
+
+}
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backGround">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_back" />
+
+    <RelativeLayout
+        android:id="@+id/rlvPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="8dp">
+
+        <CheckBox
+            android:id="@+id/cbPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="1dp"
+            android:buttonTint="#FFFFFF"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/tvPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:lineHeight="18sp"
+            android:text="@string/text_policy"
+            android:textColor="@color/colorTextPrimary" />
+
+        <TextView
+            android:id="@+id/tvPolicySub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPolicy"
+            android:layout_marginTop="7dp"
+            android:lineHeight="18sp"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorLink="@color/colorTextPrimary"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/rlvPolicy"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_disable"
+        android:fontFamily="@font/bebasneue_regular"
+        android:text="AGREE &amp; CONTINUE"
+        android:textColor="@color/colorText"
+        android:textSize="28sp" />
+</LinearLayout>

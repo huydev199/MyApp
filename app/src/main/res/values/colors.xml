@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Base colors-->
+
+    <color name="colorPrimary">#000000</color>
+    <color name="colorAccent">#2E5CFF</color>
+    <color name="colorSecondary">#7f1a18</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextSecondary">#7f1a18</color>
+    <color name="colorSuccess">#4BB543</color>
+    <color name="colorWarn">#ffcc00</color>
+    <color name="colorError">#C4C4C4</color>
+    <color name="colorLine">#4DFFFFFF</color>
+    <color name="colorEdtFocus">#2E5CFF</color>
+    <color name="colorEdtError">#FF3399</color>
+    <color name="translucentBackground">#ED000000</color>
+    <color name="backGround">#1C2135</color>
+    <color name="boxBackGroundColor">#282B4A</color>
+    <color name="colorText">#8C92AC</color>
+    <color name="colorTextTitle">#2EA4FF</color>
+    <color name="colorLactate">#FF697A</color>
+    <color name="colorTime">#00CCCC</color>
+    <color name="colorSmo2">#005EFE</color>
+    <color name="colorTextHit">#2E5CFF</color>
+    <color name="colorPicker">#4B9488</color>
+    <color name="btnColor">#2E5CFF</color>
+    <color name="btnColorCommon">#2E5CFF</color>
+    <color name="btnPressed">#4D2E5CFF</color>
+    <color name="btnLogin">#60638C</color>
+    <color name="btnDialog">#6200EE</color>
+    <color name="colorBackgroundLTTest">#1AFFFFFF</color>
+    <color name="spinnerSelectedBg">#8C92AC</color>
+    <color name="bgSeekBar">#59787880</color>
+    <color name="colorAlertTriangle">#FF4086</color>
+    <color name="highExercise">#0230D0</color>
+    <color name="colorNext">#007AFF</color>
+    <color name="lowExercise">#FF3399</color>
+    <color name="spinner">#787880</color>
+    <color name="textGray">#bdbdbd</color>
+    <color name="textGrayLight">#616161</color>
+    <color name="blueGrey700">#455A64</color>
+    <color name="brown700">#5D4037</color>
+    <color name="minSmo2">#4D8EFF</color>
+    <color name="maxSmo2">#350DFF</color>
+    <color name="minHR">#FF80BF</color>
+    <color name="maxHR">#C426FF</color>
+    <color name="progress">#4D4D4D</color>
+    <color name="content_instruction">#99000000</color>
+    <color name="colorPrimaryTitle">#DE000000</color>
+    <color name="colorPrimaryContent">#99000000</color>
+    <color name="transparency">#00000000</color>
+    <color name="backgroud_popup_gain_data">#CC000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTitlePopup">#DE000000</color>
+    <color name="colorContentPopup">#99000000</color>
+
+
+    <color name="example_5_page_bg_color">#0E0E0E</color>
+    <color name="example_5_item_view_bg_color">#1B1B1B</color>
+    <color name="example_5_toolbar_color">#282828</color>
+    <color name="example_5_text_grey">#bdbdbd</color>
+    <color name="example_5_text_grey_light">#616161</color>
+    <color name="brown_700">#5D4037</color>
+    <color name="blue_grey_700">#455A64</color>
+    <color name="white_100">#FFFFFFFF</color>
+</resources>
+
+<!--    Hex Opacity Values-->
+<!--    100% — FF-->
+<!--    95% — F2-->
+<!--    90% — E6-->
+<!--    85% — D9-->
+<!--    80% — CC-->
+<!--    75% — BF-->
+<!--    70% — B3-->
+<!--    65% — A6-->
+<!--    60% — 99-->
+<!--    55% — 8C-->
+<!--    50% — 80-->
+<!--    45% — 73-->
+<!--    40% — 66-->
+<!--    35% — 59-->
+<!--    30% — 4D-->
+<!--    25% — 40-->
+<!--    20% — 33-->
+<!--    15% — 26-->
+<!--    10% — 1A-->
+<!--    5% — 0D-->
+<!--    0% — 00-->

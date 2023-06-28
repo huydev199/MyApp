@@ -1,0 +1,98 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin_top">35dp</dimen>
+    <dimen name="margin_normal_top">38dp</dimen>
+    <dimen name="activity_horizontal_margin">32dp</dimen>
+    <dimen name="activity_horizontal_margin_secondary">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="main_padding">16dp</dimen>
+    <dimen name="main_padding_small">12dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="margin_tiny">8dp</dimen>
+    <dimen name="margin_four">4dp</dimen>
+    <dimen name="margin_normal">18dp</dimen>
+    <dimen name="margin_large">10dp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="margin_bottom">48dp</dimen>
+
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_33">33dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_85">86dp</dimen>
+
+    <!-- Card view. -->
+    <dimen name="card_corner_radius">0dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+
+    <!-- Text. -->
+    <dimen name="movie_details_title">20dp</dimen>
+    <dimen name="movie_details_text">15dp</dimen>
+    <dimen name="text_header">28sp</dimen>
+    <dimen name="text_label">18sp</dimen>
+
+    <!-- Progress view. -->
+    <dimen name="progress_view_height">10dp</dimen>
+
+    <!-- Button. -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
+
+    <!-- Icon. -->
+    <dimen name="icon_social_size">20dp</dimen>
+    <dimen name="icon_dropdown_width">12dp</dimen>
+    <dimen name="icon_dropdown_height">6dp</dimen>
+    <dimen name="icon_size">18dp</dimen>
+
+    <!-- Dialog. -->
+    <dimen name="dialog_radius">4dp</dimen>
+
+    <!-- FontWeight. -->
+    <dimen name="weight">700</dimen>
+    <dimen name="weight_small">500</dimen>
+    <dimen name="weight_tiny">400</dimen>
+
+    <!-- textSize. -->
+    <dimen name="size_big">28sp</dimen>
+    <dimen name="size_small">10sp</dimen>
+    <dimen name="size_normal">14sp</dimen>
+    <dimen name="size_large">30sp</dimen>
+    <dimen name="size_tiny">18sp</dimen>
+    <dimen name="size">12sp</dimen>
+    <dimen name="size_18">20sp</dimen>
+    <dimen name="size_20">20sp</dimen>
+    <dimen name="size_24">24sp</dimen>
+    <dimen name="size_36">36sp</dimen>
+
+    <!-- lineHigh. -->
+    <dimen name="line_high">20sp</dimen>
+    <!-- Others. -->
+    
+    <dimen name="width_72">72dp</dimen>
+    <dimen name="width_82">90dp</dimen>
+    <dimen name="high_68">68dp</dimen>
+    <dimen name="high_23">23dp</dimen>
+    <dimen name="high_60">60dp</dimen>
+    <dimen name="width_28">28dp</dimen>
+
+</resources>

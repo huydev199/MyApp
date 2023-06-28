@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "project_number": "53752414856",
+    "project_id": "repace-9ccf4",
+    "storage_bucket": "repace-9ccf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53752414856:android:decd2162258e57ae0a953d",
+        "android_client_info": {
+          "package_name": "com.obelab.repace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53752414856-0l6e0ees2nvp76ejs87r3smc4qof0hd7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace",
+            "certificate_hash": "48bff08e19124c6359d5a22e4a9320cea16f0ea8"
+          }
+        },
+        {
+          "client_id": "53752414856-3vhfmro4rmu2ng6uiovi2o6ii3bc27rs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace",
+            "certificate_hash": "e65255d14a276047c154a99df560fc2708a6287c"
+          }
+        },
+        {
+          "client_id": "53752414856-6ho39pj1jr74vdvbrsbvd2ae41qnp725.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace",
+            "certificate_hash": "bbbc51a1a90f7adf759233ded1c480edd6dbb277"
+          }
+        },
+        {
+          "client_id": "53752414856-g39gb2bvvo6mq27n2nni7s7nrphvj4rg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace",
+            "certificate_hash": "81bd4b2e4fa82506db8b3be4dd2f9cb8f596dc82"
+          }
+        },
+        {
+          "client_id": "53752414856-l1vfe0hti5a8ku26fl4r7548657tmh5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace",
+            "certificate_hash": "515e98fd9f70f39056e177db08ed48c486241f63"
+          }
+        },
+        {
+          "client_id": "53752414856-79l6qe27ivc6lur68vn6o41l831u18h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOqZJ2SqoxrYPW8D7moVcg2sMkF70DM-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53752414856-79l6qe27ivc6lur68vn6o41l831u18h8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53752414856-6b2p61u0ltvtm214nb4m92jcp280mpbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obelab.repace",
+                "app_store_id": "1585726892"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53752414856:android:a34c21e626738c330a953d",
+        "android_client_info": {
+          "package_name": "com.obelab.repace.dev.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53752414856-3ogb4n1jtm83ookssu9r0avnscd1mq9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace.dev.debug",
+            "certificate_hash": "e65255d14a276047c154a99df560fc2708a6287c"
+          }
+        },
+        {
+          "client_id": "53752414856-a8lrbtn3kk6vvmclsm1614ehri32vm3i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace.dev.debug",
+            "certificate_hash": "515e98fd9f70f39056e177db08ed48c486241f63"
+          }
+        },
+        {
+          "client_id": "53752414856-hc3g5sdui5pes3jk8fhl72l7ikivg25f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace.dev.debug",
+            "certificate_hash": "81bd4b2e4fa82506db8b3be4dd2f9cb8f596dc82"
+          }
+        },
+        {
+          "client_id": "53752414856-ube98mr1oenkmqev86cqlbvjotn3dro4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obelab.repace.dev.debug",
+            "certificate_hash": "48bff08e19124c6359d5a22e4a9320cea16f0ea8"
+          }
+        },
+        {
+          "client_id": "53752414856-79l6qe27ivc6lur68vn6o41l831u18h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOqZJ2SqoxrYPW8D7moVcg2sMkF70DM-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53752414856-79l6qe27ivc6lur68vn6o41l831u18h8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53752414856-6b2p61u0ltvtm214nb4m92jcp280mpbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obelab.repace",
+                "app_store_id": "1585726892"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

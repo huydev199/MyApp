@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="255dp"
+    android:layout_marginHorizontal="@dimen/main_padding"
+    android:background="@drawable/bg_recyclerview"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_tiny"
+    android:paddingVertical="@dimen/main_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnSpeed"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:background="@drawable/btn_enable_speed"
+            android:text="@string/speed"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDistance"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:background="@drawable/btn_disable"
+            android:text="@string/distance"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnTime"
+            app:layout_constraintStart_toEndOf="@id/btnSpeed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:background="@drawable/btn_disable"
+            android:text="@string/time"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSmo2"
+            app:layout_constraintStart_toEndOf="@id/btnDistance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnSmo2"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:background="@drawable/btn_disable"
+            android:text="@string/SmO2"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvXvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/notosanskr_bold"
+        android:text="km/h"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextPrimary"
+        android:textFontWeight="200"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_tiny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvXvalue" />
+
+    <TextView
+        android:id="@+id/tvNoDataForChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanskr_regular"
+        android:text="@string/noti_no_chart_data"
+        android:textColor="@color/colorTextPrimary"
+        android:textFontWeight="200"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/barChartMain"
+        app:layout_constraintEnd_toEndOf="@+id/barChartMain"
+        app:layout_constraintStart_toStartOf="@+id/barChartMain"
+        app:layout_constraintTop_toTopOf="@+id/barChartMain"
+        app:layout_constraintVertical_bias="0.45" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

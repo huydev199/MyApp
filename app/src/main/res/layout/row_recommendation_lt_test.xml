@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_recyclerview"
+    android:layout_marginTop="@dimen/margin_tiny">
+
+    <TextView
+        android:id="@+id/tvSession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/bebasneue_regular"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:text="1"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue_regular"
+            android:gravity="center"
+            android:text="30"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvUnitTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="@string/min"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue_regular"
+            android:gravity="right"
+            android:minWidth="25dp"
+            android:text="3.0"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvUnitSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="@string/km_h"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/tvHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/bebasneue_regular"
+            android:text="60"
+            android:minWidth="40dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+</LinearLayout>

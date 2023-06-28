@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/tvTitleLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="@string/label_language_setting"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_language_setting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_language_setting" />
+
+        <LinearLayout
+            android:id="@+id/ll_language_setting"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingHorizontal="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvValueLanguage"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="All"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imv_language_setting"
+                android:layout_width="@dimen/icon_dropdown_width"
+                android:layout_height="@dimen/icon_dropdown_height"
+                android:layout_gravity="center|end"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+
+
+        <!-- Unit -->
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="@string/label_units_of_measure"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_unit"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_unit"/>
+
+        <LinearLayout
+            android:id="@+id/ll_unit"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingHorizontal="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_language_setting">
+
+            <TextView
+                android:id="@+id/tvValueUnit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="All"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imv_unit"
+                android:layout_width="@dimen/icon_dropdown_width"
+                android:layout_height="@dimen/icon_dropdown_height"
+                android:layout_gravity="center|end"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+        <!--    Profile    -->
+
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingHorizontal="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_unit">
+
+            <TextView
+                android:id="@+id/tvValueProfile"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="All"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imv_profile"
+                android:layout_width="@dimen/icon_dropdown_width"
+                android:layout_height="@dimen/icon_dropdown_height"
+                android:layout_gravity="center|end"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_dropdown" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanskr_regular"
+            android:text="@string/label_profile_disclosure"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_label"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_profile"/>
+
+        <!--    Drop down    -->
+        <LinearLayout
+            android:id="@+id/ll_dropdown_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/ll_language_setting"
+            app:layout_constraintTop_toBottomOf="@+id/ll_language_setting">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language_en"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llKorea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvKorea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language_ko"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dropdown_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/ll_unit"
+            app:layout_constraintTop_toBottomOf="@+id/ll_unit">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llMetric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvMetric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unit_metric"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llImperial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvImperial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unit_imperial"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dropdown_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_spinner"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/ll_profile"
+            app:layout_constraintTop_toBottomOf="@+id/ll_profile">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_disclosure_all"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_disclosure_friends"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="120dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/tvNone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_disclosure_none"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

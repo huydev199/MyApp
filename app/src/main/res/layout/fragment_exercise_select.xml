@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/header_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="26sp"
+                android:text="@string/title_RX_Exercise"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/layout_exercise_low"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/view_enable">
+
+                <LinearLayout
+                    android:id="@+id/view_exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/img_low"
+                        android:layout_width="148dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/img_low_exercise"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:text="Low Intensity\nExercise"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/tvContentLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="This is a competency improving exercise that facilitates your general endurance level (low to high-intensity exercise performance). "
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/btnMoreExerciseLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="MORE"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/layout_exercise_hight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/view_enable_high">
+
+                <LinearLayout
+                    android:id="@+id/view_exercise_high"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/img_hight"
+                        android:layout_width="190dp"
+                        android:layout_height="208dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/img_high_exercise"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:text="HIGH Intensity\nExercise"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/tvContentHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="High intensity improves cardiovascular fitness as measured by maximal oxygen uptake and includes repeated rounds of exercise of maximal heart rate and maximal oxygen uptake."
+                        android:textColor="@color/colorTextPrimary"
+                        android:textFontWeight="400"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/btnMoreExerciseHigh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="MORE"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

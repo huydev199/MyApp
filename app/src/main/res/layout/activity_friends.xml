@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/id_llayout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/header_back_user_plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+
+            android:id="@+id/id_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_padding"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:background="@drawable/btn_enable_black"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_four"
+                        android:src="@drawable/ic_search">
+                    </ImageView>
+                    <EditText
+                        android:id="@+id/tv_search"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/search_friends"
+                        android:paddingLeft="@dimen/margin_four"
+                        android:text=""
+                        android:lines="1"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="@color/colorText"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:textSize="@dimen/size_normal"/>
+                    <LinearLayout
+                        android:id="@+id/id_voice"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="@dimen/margin_four"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_gravity="center_vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+
+
+                            android:src="@drawable/ic_search_voices"></ImageView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rcv_friend_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    tools:listitem="@layout/item_friends_add" />
+
+<!--                search friend from facebook-->
+                <TextView
+                    android:id="@+id/facebook_friend"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/main_padding"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:text="@string/facebook_friends"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/size_tiny" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rcv_friend_on_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    tools:listitem="@layout/item_friends_facebook" />
+
+                <!---->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rcv_facebook_friend_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    tools:listitem="@layout/item_friends_add" />
+
+                <LinearLayout
+                    android:id="@+id/id_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/main_padding"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:fontFamily="@font/notosanskr_bold"
+                        android:text="@string/friend_rec"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/size_tiny" />
+
+
+<!--                    <com.facebook.login.widget.LoginButton-->
+<!--                        android:id="@+id/login_button" -->
+<!--                        android:layout_marginHorizontal="@dimen/main_padding"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/button_height"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:background="@drawable/btn_facebook"-->
+<!--                        -->
+<!--                        android:layout_marginTop="18dp"-->
+<!--                         />-->
+                    <LinearLayout
+                        android:id="@+id/btnSearchFace"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginHorizontal="@dimen/main_padding"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/btn_facebook"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="@dimen/main_padding_small"
+                            android:layout_marginRight="@dimen/margin_tiny"
+                            android:src="@drawable/ic_facebook" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size"
+                            android:fontFamily="@font/notosanskr_bold"
+                            android:text="@string/search_friends_face"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="16sp"
+                             />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tx_friend_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/main_padding"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:fontFamily="@font/notosanskr_bold"
+                        android:text="@string/friend_request"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/size_tiny"
+                        android:layout_marginBottom="@dimen/margin_tiny"/>
+
+                    <LinearLayout
+                        android:id="@+id/id_did_not_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_recyclerview"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/main_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/any_friend"
+                            android:textColor="@color/colorTextPrimary"></TextView>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_friend_Request"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_friends_request"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tx_friend_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/main_padding"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:fontFamily="@font/notosanskr_bold"
+                        android:text="@string/friend_list"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/size_tiny"
+                        android:layout_marginBottom="@dimen/margin_tiny"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/id_do_not_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+
+                        android:background="@drawable/bg_recyclerview"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/main_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/don_any_friend"
+                            android:textColor="@color/colorTextPrimary"></TextView>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_friend_list"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_friends_request" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                        android:fontFamily="@font/notosanskr_regular"
+
+                        android:text="@string/invite_friend"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/size_tiny" />
+
+                    <Button
+                        android:id="@+id/btnInvite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                        android:layout_marginVertical="@dimen/margin_normal"
+                        android:background="@drawable/btn_enable"
+                        android:clickable="true"
+                        android:fontFamily="@font/bebasneue_regular"
+                        android:text="@string/invite"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/text_header" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

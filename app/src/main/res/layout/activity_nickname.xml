@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/backGround"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_back" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/hint_nickname"
+        android:minHeight="48dp"
+        android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
+        android:textColorHint="@color/colorText"
+        app:hintTextColor="@color/colorTextHit">
+
+        <EditText
+            android:fontFamily="@font/notosanskr_regular"
+            android:id="@+id/edtNickname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            android:textColor="@color/colorTextPrimary"
+            android:paddingTop="3dp"
+            android:textColorHint="@color/colorText"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnNickname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/rlvPolicy"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_disable"
+        android:text="@string/btn_check"
+        android:textFontWeight="400"
+        android:textColor="@color/colorText"
+        android:fontFamily="@font/bebasneue_regular"
+        android:textSize="28sp" />
+
+</LinearLayout>
