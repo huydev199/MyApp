@@ -13,6 +13,7 @@ plugins {
   id(ScriptPlugins.quality)
   id(ScriptPlugins.compilation)
   id(ScriptPlugins.gg_service)
+    id("org.jetbrains.kotlin.android")
 //    id("org.jetbrains.kotlin.android")
 }
 
@@ -57,6 +58,9 @@ android {
   kotlinOptions {
     jvmTarget = "1.8"
   }
+//    buildFeatures {
+//        viewBinding = true
+//    }
 
 }
 
@@ -65,10 +69,12 @@ dependencies {
   implementation("com.github.prolificinteractive:material-calendarview:2.0.0")
   implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
   implementation("androidx.appcompat:appcompat:1.3.1")
-  implementation("com.google.android.material:material:1.4.0")
+  implementation("com.google.android.material:material:1.5.0")
   implementation("androidx.constraintlayout:constraintlayout:2.1.0")
   implementation("androidx.databinding:databinding-runtime:4.2.2")
-  //Compile time dependencies
+//    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+//    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    //Compile time dependencies
   kapt(Libraries.lifecycleCompiler)
   kapt(Libraries.hiltCompiler)
 
@@ -144,5 +150,7 @@ dependencies {
     exclude(group = "group_name", module = "module_name")
   }
   implementation("com.airbnb.android:lottie:4.2.2")
+  implementation ("com.android.support:appcompat-v7:28.0.0-alpha3")
+  implementation ("com.android.support:design:28.0.0-alpha3")
 
 }

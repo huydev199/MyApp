@@ -87,12 +87,13 @@
     <!-- lineHigh. -->
     <dimen name="line_high">20sp</dimen>
     <!-- Others. -->
-    
+
     <dimen name="width_72">72dp</dimen>
     <dimen name="width_82">90dp</dimen>
     <dimen name="high_68">68dp</dimen>
     <dimen name="high_23">23dp</dimen>
     <dimen name="high_60">60dp</dimen>
     <dimen name="width_28">28dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>
