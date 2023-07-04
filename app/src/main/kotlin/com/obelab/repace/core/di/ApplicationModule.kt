@@ -40,7 +40,7 @@ class ApplicationModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.repace.io/api/")
+            .baseUrl("https://qts-api.hotrothantoc.online/")
             .client(createClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

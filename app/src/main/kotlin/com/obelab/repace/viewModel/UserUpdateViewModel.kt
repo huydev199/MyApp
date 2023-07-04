@@ -36,13 +36,13 @@ class UserUpdateViewModel
             )
         }
 
-    fun postUserRegister(requestRegisUserModel: RequestRegisterModel) =
-        postUserRegister(requestRegisUserModel, viewModelScope) {
-            it.fold(
-                ::handleFailure,
-                ::handlePostUserRegis
-            )
-        }
+//    fun postUserRegister(requestRegisUserModel: RequestRegisterModel) =
+//        postUserRegister(requestRegisUserModel, viewModelScope) {
+//            it.fold(
+//                ::handleFailure,
+//                ::handlePostUserRegis
+//            )
+//        }
 
     fun checkUser(requestUserUpdateModel: RequestUserUpdateModel) =
         checkUser(requestUserUpdateModel, viewModelScope) {

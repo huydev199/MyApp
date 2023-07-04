@@ -17,12 +17,13 @@ package com.obelab.repace.service
 
 import com.obelab.repace.core.interactor.UseCase
 import com.obelab.repace.model.RequestLoginModel
+import com.obelab.repace.model.ResBaseMicroModel
 import com.obelab.repace.model.ResBaseModel
 import com.obelab.repace.model.ResLoginModel
 import com.obelab.repace.repository.AuthRepository
 import javax.inject.Inject
 
 class PostUserLogin
-@Inject constructor(private val authRepository: AuthRepository) : UseCase<ResBaseModel, RequestLoginModel>() {
+@Inject constructor(private val authRepository: AuthRepository) : UseCase<ResBaseMicroModel, RequestLoginModel>() {
     override suspend fun run(params: RequestLoginModel) = authRepository.postUserLogin(params)
 }

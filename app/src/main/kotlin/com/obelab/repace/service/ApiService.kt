@@ -28,7 +28,7 @@ class ApiService
 
     override fun postUserLogin(requestBody: RequestLoginModel) = api.postUserLogin(requestBody)
 
-    override fun postUserRegister(requestBody: RequestRegisterModel) =
+    override fun postUserRegister(requestBody: RequestRegisterMicroModel) =
         api.postUserRegister(requestBody)
 
     override fun checkEmail(requestBody: RequestRegisterModel) = api.checkEmail(requestBody)

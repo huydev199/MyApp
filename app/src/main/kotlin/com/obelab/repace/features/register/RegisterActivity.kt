@@ -38,10 +38,7 @@ import com.obelab.repace.core.functional.Functions
 import com.obelab.repace.core.platform.BaseActivity
 import com.obelab.repace.core.util.Constants
 import com.obelab.repace.features.main.MainActivity
-import com.obelab.repace.model.RequestRegisterModel
-import com.obelab.repace.model.RequestSocialLoginModel
-import com.obelab.repace.model.ResBaseModel
-import com.obelab.repace.model.ResLoginModel
+import com.obelab.repace.model.*
 import com.obelab.repace.viewModel.LoginRegisterSocialViewModel
 import com.obelab.repace.viewModel.RegisterViewModel
 import kotlinx.android.synthetic.main.activity_register.*
@@ -67,6 +64,13 @@ class RegisterActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+
+        viewModel.postUserRegister(
+            RequestRegisterMicroModel("qts.vip.pro9@gmail.com","123456","123456","Âu Dương","Văn Hiếu")
+        )
+
+
 //        customTextView(tvPolicySub)
 //        acceptPolicy()
 //        checkDataValid()

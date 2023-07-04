@@ -6,11 +6,11 @@ import retrofit2.http.*
 
 internal interface Api {
 
-    @POST("public/user/login")
-    fun postUserLogin(@Body requestBody: RequestLoginModel): Call<ResBaseModel>
+    @POST("user-svc/api/v1/auth/member-login")
+    fun postUserLogin(@Body requestBody: RequestLoginModel): Call<ResBaseMicroModel>
 
-    @POST("public/user/register")
-    fun postUserRegister(@Body requestBody: RequestRegisterModel): Call<ResBaseModel>
+    @POST("api/v1/auth/member-register-social")
+    fun postUserRegister(@Body requestBody: RequestRegisterMicroModel): Call<ResBaseMicroModel>
 
     @POST("public/user/check-mail")
     fun checkEmail(@Body requestBody: RequestRegisterModel): Call<ResBaseModel>

@@ -39,6 +39,7 @@ import com.obelab.repace.features.register.NickNameActivity
 import com.obelab.repace.features.register.RC_SIGN_IN
 import com.obelab.repace.features.register.RegisterSnsActivity
 import com.obelab.repace.model.*
+import com.obelab.repace.service.PostUserLogin
 import com.obelab.repace.viewModel.LoginRegisterSocialViewModel
 import com.obelab.repace.viewModel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -71,23 +72,41 @@ class LoginActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+                viewModel.postUserLogin(
+                    RequestLoginModel(
+                        "qts.vip.pro1@gmail.com",
+                        "123456",
+//                        PrefManager.getFireBaseToken()
+                    )
+                )
+
 //      btnBack.setOnClickListener(){
 //        Log.d("LoginActivity", "hello")
 //      }
 
 
 //        setUpView()
-//        with(viewModel) {
-//            observe(userList, ::renderUserList)
-//            observe(resLoginModel, ::renderPostUserLogin)
-//            failure(failure, ::handleFailure)
-//        }
+        with(viewModel) {
+            observe(_resLoginModel, ::renderResLogin)
+            failure(failure, ::handleFailure)
+        }
 //        with(viewModelSocial) {
 //            observe(resSignInSocialModel, ::renderPostSignInSocial)
 //            failure(failure, ::handleFailure)
 //        }
     }
 
+    private fun handleFailure(failure: Failure?) {
+    }
+    private fun renderResLogin(resBaseModel: ResBaseMicroModel?) {
+        Log.d("huydev","resBaseModel"+resBaseModel)
+        hideLoading()
+        if (resBaseModel?.status == true) {
+//            finish()
+        } else {
+//            resBaseModel?.msg?.let { showToast(it) }
+        }
+    }
 
 
 //    private fun setUpView() {
@@ -402,7 +421,7 @@ class LoginActivity : BaseActivity() {
 //            btnLogin.isEnabled = true
 //            btnLogin.setBackgroundResource(R.drawable.btn_enable)
 //            btnLogin.setTextColor(
-//                ContextCompat.getColor(
+//                ContextCompat.btnloginmay tu dong vao che do (
 //                    this,
 //                    R.color.colorTextPrimary
 //                )

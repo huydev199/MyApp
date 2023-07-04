@@ -1,5 +1,6 @@
 package com.obelab.repace.repository
 
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.obelab.repace.DBManager.DatabaseHelper
@@ -16,8 +17,8 @@ import retrofit2.Call
 import javax.inject.Inject
 
 interface AuthRepository {
-    fun postUserLogin(requestBody: RequestLoginModel): Either<Failure, ResBaseModel>
-    fun postUserRegister(requestBody: RequestRegisterModel): Either<Failure, ResBaseModel>
+    fun postUserLogin(requestBody: RequestLoginModel): Either<Failure, ResBaseMicroModel>
+    fun postUserRegister(requestBody: RequestRegisterMicroModel): Either<Failure, ResBaseMicroModel>
     fun postSignInSocial(requestBody: RequestSocialLoginModel): Either<Failure, ResBaseModel>
     fun postRegisterSocial(requestBody: RequestSocialLoginModel): Either<Failure, ResBaseModel>
     fun putForgetPassword(requestBody: RequestForgetPasswordModel): Either<Failure, ResBaseModel>
@@ -51,33 +52,34 @@ interface AuthRepository {
             }
         }
 
-        override fun postUserLogin(requestBody: RequestLoginModel): Either<Failure, ResBaseModel> {
+        override fun postUserLogin(requestBody: RequestLoginModel): Either<Failure, ResBaseMicroModel> {
+            Log.d("huydev","view post userlogin"+ requestBody+networkHandler.isNetworkAvailable());
             return when (networkHandler.isNetworkAvailable()) {
-                true -> request(
+                    true -> request(
                     service.postUserLogin(requestBody),
                     {
-                        if (it.success == true) {
+                        if (it.status == true) {
                             DatabaseHelper.resetData()
                         }
                         it.toResBaseModel()
                     },
-                    ResBaseModel.empty
+                    ResBaseMicroModel.empty
                 )
                 false -> Left(NetworkConnection)
             }
         }
 
-        override fun postUserRegister(requestBody: RequestRegisterModel): Either<Failure, ResBaseModel> {
+        override fun postUserRegister(requestBody: RequestRegisterMicroModel): Either<Failure, ResBaseMicroModel> {
             return when (networkHandler.isNetworkAvailable()) {
                 true -> request(
                     service.postUserRegister(requestBody),
                     {
-                        if (it.success == true) {
+                        if (it.status == true) {
                             DatabaseHelper.resetData()
                         }
                         it.toResBaseModel()
                     },
-                    ResBaseModel.empty
+                    ResBaseMicroModel.empty
                 )
                 false -> Left(NetworkConnection)
             }

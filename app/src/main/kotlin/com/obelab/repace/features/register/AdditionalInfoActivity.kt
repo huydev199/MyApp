@@ -138,7 +138,7 @@ class AdditionalInfoActivity : BaseActivity() {
                 request.email = email
                 request.password = password
                 request.fcmToken = PrefManager.getFireBaseToken()
-                viewModel.postUserRegister(request)
+//                viewModel.postUserRegister(request)
 
             }
             if(!isSocial && !checkDataValid()){
@@ -166,7 +166,7 @@ class AdditionalInfoActivity : BaseActivity() {
                 request.email = email
                 request.password = password
                 request.fcmToken = PrefManager.getFireBaseToken()
-                viewModel.postUserRegister(request)
+//                viewModel.postUserRegister(request)
             } else {
                 val request = RequestUserUpdateModel()
                 request.nickname = nickname
