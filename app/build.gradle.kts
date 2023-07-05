@@ -152,5 +152,6 @@ dependencies {
   implementation("com.airbnb.android:lottie:4.2.2")
   implementation ("com.android.support:appcompat-v7:28.0.0-alpha3")
   implementation ("com.android.support:design:28.0.0-alpha3")
+  implementation ("com.daimajia.androidanimations:library:2.4@aar")
 
 }

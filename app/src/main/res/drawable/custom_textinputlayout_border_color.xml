@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Border color when focused -->
+<!--    <item android:color="@color/colorPrimary" android:state_focused="true" />-->
+
+    <!-- Border color when not in error state -->
+<!--    <item android:color="@color/black" />-->
+
+    <!-- Border color when in error state -->
+<!--    <item android:color="@color/blueGrey700" android:state_enabled="true" android:state_error="true" />-->
+
+    <!-- Border color when not focused -->
+<!--    <item android:color="@color/colorAccent" />-->
+
+    <item android:alpha="0.37" android:color="@color/colorAccent"/>  <!-- unfocused -->
+
+
+</selector>

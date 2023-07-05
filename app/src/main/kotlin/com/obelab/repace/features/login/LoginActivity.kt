@@ -1,45 +1,23 @@
 package com.obelab.repace.features.login
 
+import android.R as R2
 import android.content.Context
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.content.res.Resources
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat
-import com.facebook.AccessToken
+import androidx.core.widget.addTextChangedListener
 import com.facebook.CallbackManager
-import com.facebook.FacebookCallback
-import com.facebook.FacebookException
-import com.facebook.login.LoginManager
-import com.facebook.login.LoginResult
-import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.AuthCredential
-import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.gson.Gson
-import com.obelab.repace.DBManager.PrefManager
 import com.obelab.repace.R
-import com.obelab.repace.common.dialog.ConfirmDialog
 import com.obelab.repace.core.exception.Failure
 import com.obelab.repace.core.extension.failure
 import com.obelab.repace.core.extension.observe
-import com.obelab.repace.core.functional.Functions
 import com.obelab.repace.core.platform.BaseActivity
-import com.obelab.repace.core.util.Constants
-import com.obelab.repace.features.forgetPassword.ForgetPasswordActivity
-import com.obelab.repace.features.main.MainActivity
-import com.obelab.repace.features.register.NickNameActivity
-import com.obelab.repace.features.register.RC_SIGN_IN
-import com.obelab.repace.features.register.RegisterSnsActivity
 import com.obelab.repace.model.*
-import com.obelab.repace.service.PostUserLogin
 import com.obelab.repace.viewModel.LoginRegisterSocialViewModel
 import com.obelab.repace.viewModel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -71,14 +49,27 @@ class LoginActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        editEmail.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
 
-                viewModel.postUserLogin(
-                    RequestLoginModel(
-                        "qts.vip.pro1@gmail.com",
-                        "123456",
-//                        PrefManager.getFireBaseToken()
-                    )
-                )
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+//        inputEmail.setHintTextAppearance(R.style.MyTextInputLayout_error)
+//        val attrs: AttributeSet = inputEmail.context.obtainStyledAttributes(null,R.)
+
+
+//                viewModel.postUserLogin(
+//                    RequestLoginModel(
+//                        "qts.vip.pro1@gmail.com",
+//                        "123456",
+//                    )
+//                )
 
 //      btnBack.setOnClickListener(){
 //        Log.d("LoginActivity", "hello")

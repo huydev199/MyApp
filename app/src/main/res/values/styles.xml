@@ -11,6 +11,34 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="CustomOutlinedBoxDense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <!-- Customize the default border color -->
+
+        <!-- Customize the error text color -->
+<!--        <item name="boxStrokeWidthFocused">@color/colorAccent</item>-->
+<!--        <item name="hintTextColor">@color/colorAccent</item>-->
+                <item name="boxStrokeColor">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyTextInputLayout_overlay" >
+        <item name="colorOnSurface">@color/colorAccent</item>
+<!--        <item name="colorPrimary">@color/blue_grey_700</item>-->
+    </style>
+
+    <style name="MyTextInputLayout_error" >
+        <item name="colorOnSurface">@color/blueGrey700</item>
+
+        <!--        <item name="colorOnSurface">@color/colorAccent</item>-->
+<!--        <item name="colorPrimary">@color/blue_grey_700</item>-->
+    </style>
+
+    <style name="CustomOutlinedBoxDense_NotFocused" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+
+        <item name="errorTextColor">@color/btnColor</item>
+    </style>
+
     <style name="AppTheme.Translucent" parent="AppTheme">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>

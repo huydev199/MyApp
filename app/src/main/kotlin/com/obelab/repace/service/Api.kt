@@ -9,7 +9,7 @@ internal interface Api {
     @POST("user-svc/api/v1/auth/member-login")
     fun postUserLogin(@Body requestBody: RequestLoginModel): Call<ResBaseMicroModel>
 
-    @POST("api/v1/auth/member-register-social")
+    @POST("user-svc/api/v1/auth/member-register")
     fun postUserRegister(@Body requestBody: RequestRegisterMicroModel): Call<ResBaseMicroModel>
 
     @POST("public/user/check-mail")

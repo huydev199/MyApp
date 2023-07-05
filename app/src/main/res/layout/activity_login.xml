@@ -20,15 +20,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="vertical">
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/CustomOutlinedBoxDense"
+                android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email *"
+                app:hintTextColor="@color/custom_box_stroke_color_selector"
                 android:layout_marginTop="35dp"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="1dp"
                 app:boxStrokeWidthFocused="1dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -36,8 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/quicksand_regular"
-                    android:inputType="textEmailAddress"
 
+                    android:inputType="textEmailAddress"
                     android:textSize="12dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +50,8 @@
                 android:hint="Password *"
                 app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="1dp"
-                app:boxStrokeWidthFocused="1dp">
+                app:boxStrokeWidthFocused="1dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editPassword"
